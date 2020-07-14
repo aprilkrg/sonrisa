@@ -5,6 +5,9 @@ const logger = require('morgan');
 
 const app = express();
 
+require('dotenv').config();
+require('./config/database');
+
 app.use(logger('dev'));
 app.use(express.json());
 
@@ -19,7 +22,7 @@ app.get('/*', function(req, res) {
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
   });
 
-  
+
 // Configure to use port 3001 instead of 3000 during
 // development to avoid collision with React's dev server
 const port = process.env.PORT || 3001;
