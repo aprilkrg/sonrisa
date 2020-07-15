@@ -22,11 +22,10 @@ class App extends Component {
   handleSignupOrLogin = () => {
     this.setState({
       user: userService.getUser()
-    }, () => this.getAllResources());
+    })
   }
 
   async componentDidMount() {
-    // this.getAllResources();
     this.setState(
       console.log('set state here')
     )
@@ -39,17 +38,27 @@ class App extends Component {
           Sonrisa LLC
           &nbsp;&nbsp;&nbsp;
           <nav className="NavBar">
-            <NavBar />
+            <NavBar 
+             handleLogout={this.handleLogout}
+             
+            />
           </nav>
         </header>
         <main>
           <Switch>
             <Route exact path='/signup' render={({ history }) =>
-              <SignupPage history={history} handleSignupOrLogin={this.handleSignupOrLogin} />
+              <SignupPage 
+                history={history} 
+                handleSignupOrLogin={this.handleSignupOrLogin} 
+              />
             } />
             <Route exact path='/login' render={({ history }) =>
-              <LoginPage history={history} handleSignupOrLogin={this.handleSignupOrLogin} />
+              <LoginPage 
+                history={history} 
+                handleSignupOrLogin={this.handleSignupOrLogin} 
+              />
             } />
+            
 
           </Switch>
         </main>
