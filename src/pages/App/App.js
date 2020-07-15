@@ -7,6 +7,7 @@ import LoginPage from '../LoginPage/LoginPage';
 import userService from '../../utils/userService';
 import About from '../../components/About/About';
 import ContactForm from '../../components/Contact/ContactForm';
+import Resources from '../../components/Resources/Resources';
 
 class App extends Component {
   state = {
@@ -67,6 +68,16 @@ class App extends Component {
               <About 
               />
             } />
+            <Route path='/resources' render={({ history }) =>
+              <Resources 
+              />
+            } />
+          <>
+          <h1>Why Therapy?</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus ultricies tristique nulla aliquet. Facilisi etiam dignissim diam quis enim.</p>
+          <h1>Brand Statement</h1> 
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus ultricies tristique nulla aliquet. Facilisi etiam dignissim diam quis enim.</p>
+          </>
           </Switch>
         </main>
       </div>
