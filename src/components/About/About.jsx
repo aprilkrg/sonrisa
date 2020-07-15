@@ -1,15 +1,27 @@
 import React, { Component } from 'react';
 import './About.css';
 
-class About extends Component{
+class About extends Component {
     render() {
-        return(
+        return (
             <div className='About'>
-                <h2>About Page</h2> 
-                <div>theoretical approach</div>
-                <div>how I treat ... </div>
-                <div>trauma informed</div>
-                <div>lgbtqia affirming</div>
+                <div className='About-section'>
+                    <h3>theoretical approach</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tellus id interdum velit laoreet id donec. Amet massa vitae tortor condimentum lacinia quis. Semper auctor neque vitae tempus quam pellentesque nec nam. Vestibulum sed arcu non odio euismod lacinia at.</p>
+                </div><br></br>
+                <div className='About-section'>
+                    <h3>how I treat ... </h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tellus id interdum velit laoreet id donec. Amet massa vitae tortor condimentum lacinia quis. Semper auctor neque vitae tempus quam pellentesque nec nam. Vestibulum sed arcu non odio euismod lacinia at.</p>
+                </div>
+                <div className='About-section'>
+                    <h3>trauma informed</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tellus id interdum velit laoreet id donec. Amet massa vitae tortor condimentum lacinia quis. Semper auctor neque vitae tempus quam pellentesque nec nam. Vestibulum sed arcu non odio euismod lacinia at.</p>
+                </div>
+                <div className='About-section'>
+                    <h3>lgbtqia affirming</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tellus id interdum velit laoreet id donec. Amet massa vitae tortor condimentum lacinia quis. Semper auctor neque vitae tempus quam pellentesque nec nam. Vestibulum sed arcu non odio euismod lacinia at.</p>
+                </div>
+                <h3><button>en español</button></h3>
             </div>
         )
     }

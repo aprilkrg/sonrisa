@@ -1,4 +1,10 @@
 .About {
     display: flex;
     flex-direction: column;
+    margin: 1rem;
+}
+
+.About-section {
+    border: gray solid 2px;
+    padding-bottom: 1rem;
 }

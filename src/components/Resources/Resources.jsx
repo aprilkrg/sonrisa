@@ -6,6 +6,7 @@ class Resources extends Component{
         return(
             <div>
                 Resource List
+                
             </div>
         )
     }
