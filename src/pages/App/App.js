@@ -5,6 +5,8 @@ import NavBar from '../../components/NavBar/NavBar';
 import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
 import userService from '../../utils/userService';
+import About from '../../components/About/About';
+import ContactForm from '../../components/Contact/ContactForm';
 
 class App extends Component {
   state = {
@@ -35,8 +37,6 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          Sonrisa LLC
-          &nbsp;&nbsp;&nbsp;
           <nav className="NavBar">
             <NavBar 
              handleLogout={this.handleLogout}
@@ -57,9 +57,16 @@ class App extends Component {
                 history={history} 
                 handleSignupOrLogin={this.handleSignupOrLogin} 
               />
+            } />  
+            <Route path='/contact' render={({ history }) =>
+              <ContactForm 
+                history={history}
+              />
             } />
-            
-
+            <Route path='/about' render={({ history }) =>
+              <About 
+              />
+            } />
           </Switch>
         </main>
       </div>

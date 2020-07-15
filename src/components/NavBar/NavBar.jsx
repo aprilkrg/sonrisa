@@ -10,7 +10,14 @@ class NavBar extends Component {
             <div className='NavBar'>
                 {userService.getUser() ? 
                     <>
-                        <Link to='/logout' onClick={this.props.handleLogout} >LOG OUT</Link>
+                        <Link to='/logout' onClick={this.props.handleLogout} className='NavBar-link'>LOG OUT</Link>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <Link to='/contact' className='NavBar-link'>CONTACT</Link>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <Link to='/about' className='NavBar-link'>ABOUT</Link>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <Link to='/' className='NavBar-link'>HOME</Link>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
                         {userService.getUser().name ? `WELCOME, ${userService.getUser().name.toUpperCase()}` : ''}
                         &nbsp;&nbsp;&nbsp;&nbsp;
                     </>

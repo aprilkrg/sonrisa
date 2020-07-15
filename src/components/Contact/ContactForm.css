@@ -1,0 +1,9 @@
+.ContactForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.ContactForm-name, .ContactForm-email, .ContactForm-question {
+    width: 10rem;
+
+}
