@@ -1,10 +1,17 @@
 .App {
   text-align: center;
+  --primaryColor: #f18973;
+  --accentColor: #bc5a45;
+  --lightColor: #f4e1d2;
+  --darkColor: #b2b2b2;
+  --darkestColor: #242427;
 }
 
 .App-header {
-  background-color: #f7cdba;
-  color: rgb(39, 37, 37);
+  /* background-color: #f7cdba; */
+  background-color: var(--darkColor);
+  opacity: .7;
+  color: var(--darkestColor);
   min-height: 100px;
   font-size: calc(10px + 2vmin);
   display: flex;
@@ -17,10 +24,12 @@
   color: #242427;
 }
 
-.home-section {
-  background-color: rgba(247, 236, 216, 0.5);
-  border: rgb(243, 237, 212) solid 5px;
+.App-home-section {
+  background-color: var(--lightColor);
+  border: var(--primaryColor) solid 5px;
+  color: var(--darkestColor);
   border-style: outset;
   padding-bottom: 1rem;
   margin: 1rem;
+  opacity: .9;
 }

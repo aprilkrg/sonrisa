@@ -8,11 +8,25 @@ import userService from '../../utils/userService';
 import About from '../../components/About/About';
 import ContactForm from '../../components/Contact/ContactForm';
 import Resources from '../../components/Resources/Resources';
+import * as contactService from '../../utils/contactService';
 
 class App extends Component {
   state = {
+    contactForms: [],
     resources: [],
     user: userService.getUser(),
+  }
+
+  handleFormSubmit = async newContactForm => {
+    await contactService.createContactFormAPI(newContactForm);
+    this.getAllContactForms();
+  }
+
+  getAllContactForms = async () => {
+    const forms = await contactService.getAllContactFormsAPI();
+    this.setState({
+      forms
+    });
   }
 
   handleLogout = () => {
@@ -73,11 +87,11 @@ class App extends Component {
               />
             } />
           <>
-          <div className='home-section'>
+          <div className='App-home-section'>
             <h1>Why Therapy?</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus ultricies tristique nulla aliquet. Facilisi etiam dignissim diam quis enim.</p>
           </div>
-          <div className='home-section'>
+          <div className='App-home-section'>
             <h1>Brand Statement</h1> 
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus ultricies tristique nulla aliquet. Facilisi etiam dignissim diam quis enim.</p>
           </div>

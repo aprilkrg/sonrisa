@@ -1,13 +1,16 @@
 .NavBar {
     display: flex;
     flex-direction: row-reverse;
-    color: rgb(255, 255, 255);
-    text-shadow: 2px 2px #b37f7f;
+    /* color: rgb(255, 255, 255); */
+    color: var(--accentColor);
+    text-shadow: 2px 1px var(--lightColor);
+    opacity: .9;
 }
 
 .NavBar-link {
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    /* color: rgb(255, 255, 255); */
+    color: var(--accentColor);
 }
 
 .NavBar-welcome {
