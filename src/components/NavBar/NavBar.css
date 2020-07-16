@@ -1,8 +1,15 @@
 .NavBar {
     display: flex;
     flex-direction: row-reverse;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px #b37f7f;
 }
 
 .NavBar-link {
     text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.NavBar-welcome {
+   
 }

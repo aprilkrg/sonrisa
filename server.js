@@ -9,6 +9,7 @@ require('dotenv').config();
 require('./config/database');
 
 const usersRoutes = require('./routes/users');
+const contactFormsRoutes = require('./routes/contactForms');
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -17,6 +18,7 @@ app.use(express.static(path.join(__dirname, 'build')));
 
 // Put API routes here, before the "catch all" route
 app.use('/api/users', usersRoutes);
+app.use('/api/contactForms', contactFormsRoutes);
 // Load config/auth
 app.use(require('./config/auth'));
 

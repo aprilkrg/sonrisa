@@ -5,6 +5,8 @@
 }
 
 .About-section {
-    border: gray solid 2px;
+    background-color: rgba(247, 236, 216, 0.5);
+    border: rgb(243, 237, 212) solid 5px;
+    border-style: outset;
     padding-bottom: 1rem;
 }

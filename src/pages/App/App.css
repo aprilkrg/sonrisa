@@ -3,7 +3,7 @@
 }
 
 .App-header {
-  background-color: #dde3f0;
+  background-color: #f7cdba;
   color: rgb(39, 37, 37);
   min-height: 100px;
   font-size: calc(10px + 2vmin);
@@ -14,7 +14,13 @@
 }
 
 .App-link {
-  color: #093eee;
+  color: #242427;
 }
 
-
+.home-section {
+  background-color: rgba(247, 236, 216, 0.5);
+  border: rgb(243, 237, 212) solid 5px;
+  border-style: outset;
+  padding-bottom: 1rem;
+  margin: 1rem;
+}
