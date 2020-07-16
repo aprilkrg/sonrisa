@@ -14,5 +14,6 @@
 }
 
 .NavBar-welcome {
-   
+    position: relative;
+    padding-right: 30rem;
 }
