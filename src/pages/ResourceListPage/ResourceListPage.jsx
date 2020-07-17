@@ -6,13 +6,13 @@ function ResourceListPage({ resourcesFromParent, handleDeleteResource }) {
         <>
             <h1>Resources</h1>
             <div>
-                {resourcesFromParent.map(resource =>
+                {/* {resourcesFromParent.map(resource =>
                     <ResourceCard
                         key={resource._id}
                         resourceFromParent={resource}
                         handleDeleteResource={handleDeleteResource}
                     />
-                )}
+                )} */}
             </div>
         </>
     )
