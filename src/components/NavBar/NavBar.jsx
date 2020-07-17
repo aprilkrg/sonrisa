@@ -12,6 +12,8 @@ class NavBar extends Component {
                     <>
                         <Link to='/logout' onClick={this.props.handleLogout} className='NavBar-link'>LOG OUT</Link>
                         &nbsp;&nbsp;&nbsp;&nbsp;
+                        <Link to='/add' className='NavBar-link'>ADD RESOURCES</Link>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
                         <Link to='/resources' className='NavBar-link'>RESOURCES</Link>
                         &nbsp;&nbsp;&nbsp;&nbsp;
                         <Link to='/contact' className='NavBar-link'>CONTACT</Link>

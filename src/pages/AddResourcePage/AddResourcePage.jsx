@@ -22,7 +22,7 @@ class AddResourcePage extends Component {
 
     handleSubmit = e => {
         e.preventDefault();
-        this.props.handleAddPuppy(this.state.formData);
+        this.props.handleAddResource(this.state.formData);
     }
 
     render() {

@@ -128,6 +128,7 @@ class App extends Component {
                 :
                 <Redirect to='/resources' />
             } />
+
           <>
           <div className='App-home-section'>
             <h1>Why Therapy?</h1>
