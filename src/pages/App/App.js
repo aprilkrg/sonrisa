@@ -1,14 +1,18 @@
 import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import './App.css';
-import NavBar from '../../components/NavBar/NavBar';
 import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
-import userService from '../../utils/userService';
+import ResourceListPage from '../ResourceListPage/ResourceListPage';
+import AddResourcePage from '../AddResourcePage/AddResourcePage';
+import EditResourcePage from '../EditResourcePage/EditResourcePage';
+import NavBar from '../../components/NavBar/NavBar';
 import About from '../../components/About/About';
 import ContactForm from '../../components/Contact/ContactForm';
-import Resources from '../../components/Resources/Resources';
+import userService from '../../utils/userService';
 import * as contactService from '../../utils/contactService';
+import * as resourceService from '../../utils/resourcesService';
+
 
 class App extends Component {
   state = {
@@ -42,7 +46,32 @@ class App extends Component {
     })
   }
 
+  handleAddResource = async newResourceData => {
+    await resourceService.createResourceAPI(newResourceData);
+    this.getAllResources();
+  }
+
+  handleDeleteResource = async idOfResourceToDelete => {
+    await resourceService.deleteResourceAPI(idOfResourceToDelete);
+    this.setState(state => ({
+      resources: state.resources.filter(resource => resource._id !== idOfResourceToDelete)
+    }), () => this.props.history.push('/'));
+  }
+
+  handleUpdateResource = async updatedResourceData => {
+    await resourceService.updateResourceAPI(updatedResourceData);
+    this.getAllResources();
+  }
+
+  getAllResources = async () => {
+    const resources = await resourceService.getAllResourcesAPI();
+    this.setState({
+      resources
+    }, () => this.props.history.push('/'));
+  }
+
   async componentDidMount() {
+    this.getAllResources();
     this.setState(
       console.log('set state here')
     )
@@ -55,7 +84,6 @@ class App extends Component {
           <nav className="NavBar">
             <NavBar 
              handleLogout={this.handleLogout}
-             
             />
           </nav>
         </header>
@@ -83,8 +111,22 @@ class App extends Component {
               />
             } />
             <Route path='/resources' render={({ history }) =>
-              <Resources 
+              <ResourceListPage 
+                resourcesFromParent={this.state.resources}
+                handleDeleteResource={this.handleDeleteResource}
               />
+            } />
+            <Route path='/add' render={() =>
+              userService.getUser() ? 
+                <AddResourcePage handleAddResource={this.handleAddResource} />
+                :
+                <Redirect to='/resources' />
+            } />
+            <Route path='/edit' render={() =>
+              userService.getUser() ?
+                <EditResourcePage handleUpdateResource={this.handleUpdateResource} />
+                :
+                <Redirect to='/resources' />
             } />
           <>
           <div className='App-home-section'>

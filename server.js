@@ -10,6 +10,7 @@ require('./config/database');
 
 const usersRoutes = require('./routes/users');
 const contactFormsRoutes = require('./routes/contactForms');
+const resourcesRoutes = require('./routes/resources');
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -19,6 +20,7 @@ app.use(express.static(path.join(__dirname, 'build')));
 // Put API routes here, before the "catch all" route
 app.use('/api/users', usersRoutes);
 app.use('/api/contactForms', contactFormsRoutes);
+app.use('/api/resources', resourcesRoutes);
 // Load config/auth
 app.use(require('./config/auth'));
 
