@@ -55,7 +55,7 @@ class App extends Component {
     await resourceService.deleteResourceAPI(idOfResourceToDelete);
     this.setState(state => ({
       resources: state.resources.filter(resource => resource._id !== idOfResourceToDelete)
-    }), () => this.props.history.push('/'));
+    }), () => this.props.history.push('/resources'));
   }
 
   handleUpdateResource = async updatedResourceData => {
@@ -67,7 +67,7 @@ class App extends Component {
     const resources = await resourceService.getAllResourcesAPI();
     this.setState({
       resources
-    }, () => this.props.history.push('/'));
+    }, () => this.props.history.push('/resources'));
   }
 
   async componentDidMount() {
@@ -118,13 +118,16 @@ class App extends Component {
             } />
             <Route path='/add' render={() =>
               userService.getUser() ? 
-                <AddResourcePage handleAddResource={this.handleAddResource} />
+                <AddResourcePage 
+                  handleAddResource={this.handleAddResource} />
                 :
                 <Redirect to='/resources' />
             } />
-            <Route path='/edit' render={() =>
+            <Route path='/edit' render={({ history, location }) =>
               userService.getUser() ?
-                <EditResourcePage handleUpdateResource={this.handleUpdateResource} />
+                <EditResourcePage 
+                  handleUpdateResource={this.handleUpdateResource} 
+                  location={location}/>
                 :
                 <Redirect to='/resources' />
             } />
