@@ -41,6 +41,11 @@ class ContactForm extends Component {
         return (
             <div>
                 <h2>Contact Form</h2>
+                <img 
+                    src="https://i.imgur.com/4ojZU90.jpeg" 
+                    alt="A person sits and looks up and away, behind them are pink clouds and a blue sky"
+                    width="300rem"
+                />
                 <form id='ContactForm' onSubmit={this.handleSubmit}>
                     <input 
                         type='text' 

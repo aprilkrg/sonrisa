@@ -66,3 +66,10 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+This project includes:
+<span>Photo by <a href="https://unsplash.com/@ngocntmn?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Minh Ngọc</a> on <a href="https://unsplash.com/@aprilkrg/likes?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+<span>Photo by <a href="https://unsplash.com/@adamthomas48?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Adam Thomas</a> on <a href="https://unsplash.com/@aprilkrg/likes?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+<span>Photo by <a href="https://unsplash.com/@drewcolins?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Drew Colins</a> on <a href="https://unsplash.com/@aprilkrg/likes?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+<span>Photo by <a href="https://unsplash.com/@j_erhunse?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Jeffery Erhunse</a> on <a href="https://unsplash.com/@aprilkrg/likes?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>

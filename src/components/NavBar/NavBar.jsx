@@ -16,6 +16,8 @@ class NavBar extends Component {
                         &nbsp;&nbsp;&nbsp;&nbsp;
                         <Link to='/resources' className='NavBar-link'>RESOURCES</Link>
                         &nbsp;&nbsp;&nbsp;&nbsp;
+                        <Link to='/services' className='NavBar-link'>SERVICES</Link>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
                         <Link to='/contact' className='NavBar-link'>CONTACT</Link>
                         &nbsp;&nbsp;&nbsp;&nbsp;
                         <Link to='/about' className='NavBar-link'>ABOUT</Link>
@@ -32,6 +34,8 @@ class NavBar extends Component {
                         <Link to='/signup' className='NavBar-link'>SIGN UP</Link>
                         &nbsp;&nbsp;&nbsp;&nbsp;
                         <Link to='/contact' className='NavBar-link'>CONTACT</Link>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <Link to='/services' className='NavBar-link'>SERVICES</Link>
                         &nbsp;&nbsp;&nbsp;&nbsp;
                         <Link to='/about' className='NavBar-link'>ABOUT</Link>
                         &nbsp;&nbsp;&nbsp;&nbsp;

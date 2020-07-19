@@ -2,15 +2,15 @@
     display: flex;
     flex-direction: row-reverse;
     /* color: rgb(255, 255, 255); */
-    color: var(--accentColor);
-    text-shadow: 2px 1px var(--lightColor);
+    color: black;
+    text-shadow: 2px 2px lightgrey;
     opacity: .9;
 }
 
 .NavBar-link {
     text-decoration: none;
     /* color: rgb(255, 255, 255); */
-    color: var(--accentColor);
+    color: black;
 }
 
 .NavBar-welcome {
