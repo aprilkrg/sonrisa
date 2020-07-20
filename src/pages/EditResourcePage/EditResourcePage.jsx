@@ -61,7 +61,9 @@ class EditResourcePage extends Component {
                     >
                         SAVE RESOURCE
                     </button>&nbsp;&nbsp;
-                    <Link to='/'>CANCEL</Link>
+                    <Link to='/'
+                        className='btn'
+                    >CANCEL</Link>
                 </form>
             </>
         );

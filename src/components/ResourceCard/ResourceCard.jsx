@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import userService from '../../utils/userService';
 
 function ResourceCard({ resourceFromParent, handleDeleteResource }) {
     return(
@@ -14,6 +15,7 @@ function ResourceCard({ resourceFromParent, handleDeleteResource }) {
                     <dd>{resourceFromParent.body}</dd>
                 </dl>
             </div>
+            {userService.isAdmin() ? 
             <div>
                 <Link 
                     to={{ pathname: '/edit', state: {clickedOnResource: resourceFromParent} }}
@@ -26,6 +28,12 @@ function ResourceCard({ resourceFromParent, handleDeleteResource }) {
                 >
                 DELETE</button>
             </div>
+                :
+                <button
+                    className='btn'
+                >SAVE</button>
+            }
+
         </div>
 
     )

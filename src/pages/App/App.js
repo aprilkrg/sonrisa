@@ -14,7 +14,6 @@ import * as contactService from '../../utils/contactService';
 import * as resourceService from '../../utils/resourcesService';
 import ServicesPage from '../ServicesPage/ServicesPage';
 
-
 class App extends Component {
   state = {
     contactForms: [],
@@ -124,14 +123,14 @@ class App extends Component {
               />
             } />
             <Route path='/add' render={() =>
-              userService.getUser() ? 
+              userService.isAdmin() ? 
                 <AddResourcePage 
                   handleAddResource={this.handleAddResource} />
                 :
                 <Redirect to='/' />
               } />
             <Route path='/edit' render={({ history, location }) =>
-              userService.getUser() ?
+              userService.isAdmin() ?
                 <EditResourcePage 
                   handleUpdateResource={this.handleUpdateResource} 
                   location={location}/>

@@ -23,6 +23,10 @@ function getUser() {
   return tokenService.getUserFromToken();
 }
 
+function isAdmin() {
+  console.log('this is the admin function');
+}
+
 function logout() {
   tokenService.removeTokenFromStorage();
 }
@@ -44,6 +48,7 @@ function login(creds) {
 export default {
   signup, 
   getUser,
+  isAdmin,
   logout,
   login
 };
