@@ -14,8 +14,8 @@ function ResourceListPage({ resourcesFromParent, handleDeleteResource }) {
                         handleDeleteResource={handleDeleteResource}
                     />
                     </div>
-                    )}
-                    &nbsp;&nbsp;&nbsp;&nbsp;
+                )}
+                &nbsp;&nbsp;&nbsp;&nbsp;
             </div>
         </>
     )

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import './ContactForm.css';
-import * as contactService from '../../utils/contactService';
+import * as contactService from '../../utils/contactFormsService';
+import './AddContactFormPage.css';
 
 
-class ContactForm extends Component {
+class ContactFormPage extends Component {
     state = {
         formData: {
             name: '',
@@ -91,4 +91,4 @@ class ContactForm extends Component {
     }
 }
 
-export default ContactForm;
+export default ContactFormPage;

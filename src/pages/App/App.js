@@ -9,9 +9,10 @@ import EditResourcePage from '../EditResourcePage/EditResourcePage';
 import NavBar from '../../components/NavBar/NavBar';
 import Footer from '../../components/Footer/Footer';
 import About from '../../components/About/About';
-import ContactForm from '../../components/Contact/ContactForm';
+import ContactForm from '../../components/ContactFormCard/ContactFormCard';
+import AddContactFormPage from '../AddContactFormPage/AddContactFormPage';
 import userService from '../../utils/userService';
-import * as contactService from '../../utils/contactService';
+import * as contactService from '../../utils/contactFormsService';
 import * as resourceService from '../../utils/resourcesService';
 import ServicesPage from '../ServicesPage/ServicesPage';
 
@@ -103,7 +104,7 @@ class App extends Component {
               />
             } />  
             <Route path='/contact' render={({ history }) =>
-              <ContactForm 
+              <AddContactFormPage 
                 history={history}
               />
             } />

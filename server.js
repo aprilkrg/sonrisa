@@ -9,8 +9,8 @@ require('dotenv').config();
 require('./config/database');
 
 const usersRoutes = require('./routes/users');
-const contactFormsRoutes = require('./routes/contactForms');
 const resourcesRoutes = require('./routes/resources');
+const contactFormsRoutes = require('./routes/contactForms');
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -21,8 +21,8 @@ app.use(express.static(path.join(__dirname, 'build')));
 app.use('/api/users', usersRoutes);
 // Load config/auth
 app.use(require('./config/auth'));
-app.use('/api/contactForms', contactFormsRoutes);
 app.use('/api/resources', resourcesRoutes);
+app.use('/api/contactForms', contactFormsRoutes);
 
 // The following "catch all" route (note the *)is necessary
 // for a SPA's client-side routing to properly work
