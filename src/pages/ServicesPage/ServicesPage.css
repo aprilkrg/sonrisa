@@ -8,3 +8,9 @@
 .ServicesPage-h2 {
     text-align: center;
 }
+
+.ServicesPage-img {
+    float: left;
+    border-radius: 1rem;
+    margin-right: 3rem;
+}

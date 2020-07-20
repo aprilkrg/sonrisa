@@ -56,7 +56,6 @@ class App extends Component {
     this.setState(state => ({
       resources: state.resources.filter(resource => resource._id !== idOfResourceToDelete)
     }), () => this.props.history.push('/resources'));
-    console.log('pushing from handleDeleteResources > App.js');
   }
 
   handleUpdateResource = async updatedResourceData => {
@@ -69,7 +68,6 @@ class App extends Component {
     this.setState({
       resources
     }, () => this.props.history.push('/resources'));
-    console.log('pushing from getAllResources > App.js');
   }
 
   async componentDidMount() {

@@ -10,12 +10,18 @@ function ServicesPage(props) {
             </div>
             <div className='div-section ServicesPage-section'>
                 <h2 className='ServicesPage-h2'>Adolescent Group Therapy</h2>
+                <img 
+                    src="https://i.imgur.com/uGWvss8.jpg" 
+                    alt="A group of young people sit in a circle on the grassy ground"
+                    width='400rem'
+                    className='ServicesPage-img'
+                />
                 <p>I’ve run an LGBTQ support group in an inpatient psych hospital and helped 100s of teenagers who experience:</p>
-                <ul className=' ServicesPage-section'>
-                    <li>Rejection from parents, family, and religious communities</li>
-                    <li>Bullying from peers</li>
-                    <li>Questioning their sexuality or gender identity</li>
-                    <li>Navigating their transition process</li>
+                <ul className='ServicesPage-section'>
+                    <li className='ServicesPage-li'>Rejection from parents, family, and religious communities</li>
+                    <li className='ServicesPage-li'>Bullying from peers</li>
+                    <li className='ServicesPage-li'>Questioning their sexuality or gender identity</li>
+                    <li className='ServicesPage-li'>Navigating their transition process</li>
                 </ul>
                 <p>In my groups, teens are able to feel understood and less alone.</p>
             </div>

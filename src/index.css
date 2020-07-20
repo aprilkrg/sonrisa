@@ -28,3 +28,8 @@ code {
   margin: 1rem;
   font-size: 18px;
 }
+
+.btn-cancel:hover {
+  border: red 3px solid;
+  color: red;
+}
