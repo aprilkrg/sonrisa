@@ -7,6 +7,7 @@ import ResourceListPage from '../ResourceListPage/ResourceListPage';
 import AddResourcePage from '../AddResourcePage/AddResourcePage';
 import EditResourcePage from '../EditResourcePage/EditResourcePage';
 import NavBar from '../../components/NavBar/NavBar';
+import Footer from '../../components/Footer/Footer';
 import About from '../../components/About/About';
 import ContactForm from '../../components/Contact/ContactForm';
 import userService from '../../utils/userService';
@@ -48,7 +49,7 @@ class App extends Component {
 
   handleAddResource = async newResourceData => {
     await resourceService.createResourceAPI(newResourceData);
-    this.getAllResources();
+    this.getAllResources(true);
   }
 
   handleDeleteResource = async idOfResourceToDelete => {
@@ -60,21 +61,21 @@ class App extends Component {
 
   handleUpdateResource = async updatedResourceData => {
     await resourceService.updateResourceAPI(updatedResourceData);
-    this.getAllResources();
+    this.getAllResources(true);
   }
 
   getAllResources = async () => {
     const resources = await resourceService.getAllResourcesAPI();
     this.setState({
       resources
-    }, () => this.props.history.push('/resources'));
+    });
   }
 
   async componentDidMount() {
     this.getAllResources();
-    this.setState(
-      console.log('set state here')
-    )
+    // this.setState(
+    //   console.log('set state here')
+    // )
   }
 
   render() {
@@ -160,6 +161,9 @@ class App extends Component {
           </>
           </Switch>
         </main>
+      <footer>
+          {/* <Footer /> */}
+      </footer>
       </div>
     );
   }

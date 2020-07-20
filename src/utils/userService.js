@@ -24,6 +24,8 @@ function getUser() {
 }
 
 function isAdmin() {
+  console.log(getUser(),'get the user');
+  return getUser().isAdmin;
   console.log('this is the admin function');
 }
 

@@ -40,7 +40,7 @@ class ContactForm extends Component {
     render() {
         return (
             <>
-                <h3>You can contact me at ew@sonrisacounseling.com, or send me any questions or concerns!</h3>
+                <h3>You can contact me at ewebster@highlandbehavioral.org, or send me any questions or concerns!</h3>
                 <div className='ContactForm'>
                 <img 
                     src="https://i.imgur.com/4ojZU90.jpeg" 

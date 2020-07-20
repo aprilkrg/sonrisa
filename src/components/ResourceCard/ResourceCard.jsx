@@ -29,9 +29,7 @@ function ResourceCard({ resourceFromParent, handleDeleteResource }) {
                 DELETE</button>
             </div>
                 :
-                <button
-                    className='btn'
-                >SAVE</button>
+                ''
             }
 
         </div>
