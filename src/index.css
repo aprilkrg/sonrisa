@@ -20,3 +20,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.div-section {
+  background-color: white;
+  border: whitesmoke solid 5px;
+  border-style: outset;
+  margin: 1rem;
+  font-size: 18px;
+}

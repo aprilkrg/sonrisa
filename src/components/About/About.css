@@ -7,12 +7,26 @@
     flex-direction: column;
     /* margin: 1rem; */
     margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .About-section {
     background-color: white;
     border: whitesmoke solid 5px;
     border-style: outset;
-    padding-bottom: 1rem;
-    /* opacity: .8; */
+    margin: 1rem;
+    font-size: 20px;
+}
+
+.About-img {
+    float: right;
+    border-radius: 1.5rem;
+    margin: 1rem;
+}
+
+.About-img2 {
+    float: left;
+    border-radius: 1.5rem;
+    margin: 1rem;
 }

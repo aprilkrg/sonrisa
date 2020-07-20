@@ -5,7 +5,6 @@ import ResourceCard from '../../components/ResourceCard/ResourceCard';
 function ResourceListPage({ resourcesFromParent, handleDeleteResource }) {
     return (
         <>
-            <h1>Resources</h1>
             <div className='ResourceCardPage'>
                 {resourcesFromParent.map(resource =>
                     <div className='ResourceCard'>

@@ -1,11 +1,10 @@
-.Services-section {
-    background-color: white;
+.ServicesPage-section {
+    list-style: circle;
+    text-align: left;
+    padding: 1rem;
+    margin: 2.5rem;
 }
 
-.Services-h1 {
-    background-color: rgba(255, 255, 255, .7);
-    /* border: rgba(255, 255, 255, 0.6) solid 5px; */
-    /* border-style: outset; */
-    border-radius: 1rem;
-    margin: 1rem;
+.ServicesPage-h2 {
+    text-align: center;
 }

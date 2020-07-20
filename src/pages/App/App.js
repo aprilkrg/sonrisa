@@ -140,22 +140,24 @@ class App extends Component {
             } />
 
           <>
-          <div className='App-home-section'
+          <div className='App-home-section div-section'
             style={{
               float:'left'}}
           >
-            <h1>Why Therapy?</h1>
           <img 
             src="https://i.imgur.com/Y74nRmV.jpg"
             alt="A person dancing on a boardwalk joyously, the sky behind them shows a rainbow"
             width="300rem"
             style={{
-              float:'right'}}
-          />
+              float:'right',
+              borderRadius:'1.5rem',
+              margin:'1rem',
+            }}
+            />
+          <h1>Why Therapy?</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus ultricies tristique nulla aliquet. Facilisi etiam dignissim diam quis enim.</p>
-          </div> <br></br>
-          <div className='App-home-section'>
-            <h1>Sonrisa Counseling LLC</h1> 
+          <br/>
+          <h1>Sonrisa Counseling LLC</h1> 
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus ultricies tristique nulla aliquet. Facilisi etiam dignissim diam quis enim.</p>
           </div>
           </>

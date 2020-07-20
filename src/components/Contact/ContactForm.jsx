@@ -40,11 +40,11 @@ class ContactForm extends Component {
     render() {
         return (
             <>
-            <h2>Contact Form</h2>
+                <h3>You can contact me at ew@sonrisacounseling.com, or send me any questions or concerns!</h3>
                 <div className='ContactForm'>
                 <img 
                     src="https://i.imgur.com/4ojZU90.jpeg" 
-                    alt="A person sits and looks up and away, behind them are pink clouds and a blue sky"
+                    alt="A person sits facing the camera and looks up and away, behind them are pink clouds and a blue sky"
                     width="300rem"
                     className='ContactForm-img'
                 /> 
@@ -73,7 +73,7 @@ class ContactForm extends Component {
                         required
                         placeholder='questions?' 
                         name='question'
-                        className='ContactForm-input'>
+                        className='ContactForm-input ContactForm-question'>
                     </textarea><br></br>
                     <input 
                         type='submit' 
