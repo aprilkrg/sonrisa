@@ -23,7 +23,7 @@ function ResourceCard({ resourceFromParent, handleDeleteResource }) {
                 >    
                 EDIT</Link>
                 <button
-                    className='btn'
+                    className='btn btn-cancel'
                     onClick={() => handleDeleteResource(resourceFromParent._id)}
                 >
                 DELETE</button>

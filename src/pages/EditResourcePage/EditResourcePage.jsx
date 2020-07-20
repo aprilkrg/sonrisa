@@ -24,7 +24,7 @@ class EditResourcePage extends Component {
         return(
             <>
                 <h1>Edit</h1>
-                <form onSubmit={this.handleSubmit}>
+                <form onClick={this.handleSubmit}>
                     <div>
                         <label>Title</label>
                         <input
@@ -54,15 +54,16 @@ class EditResourcePage extends Component {
                             onChange={this.handleChange}
                             required
                         />
-                    </div>
-                    <button
+                    </div><br/>
+                    <Link
+                        
+                        to='/resources'
                         type='submit'
-                        className='btn'
-                    >
-                        SAVE RESOURCE
-                    </button>&nbsp;&nbsp;
-                    <Link to='/'
-                        className='btn'
+                        className='btn btn-link'
+                    >SAVE RESOURCE
+                    </Link>&nbsp;&nbsp;
+                    <Link to='/resources'
+                        className='btn btn-cancel btn-link'
                     >CANCEL</Link>
                 </form>
             </>

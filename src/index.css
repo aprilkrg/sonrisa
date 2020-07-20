@@ -33,3 +33,7 @@ code {
   border: red 3px solid;
   color: red;
 }
+
+.btn-link {
+  background-color: pink;
+}

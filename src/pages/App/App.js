@@ -151,7 +151,8 @@ class App extends Component {
               userService.isAdmin() ?
                 <EditResourcePage 
                   handleUpdateResource={this.handleUpdateResource} 
-                  location={location}/>
+                  location={location}
+                  history={history} />
                 :
                 <Redirect to='/' />
             } />
