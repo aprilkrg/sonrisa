@@ -39,13 +39,15 @@ class ContactForm extends Component {
 
     render() {
         return (
-            <div>
-                <h2>Contact Form</h2>
+            <>
+            <h2>Contact Form</h2>
+                <div className='ContactForm'>
                 <img 
                     src="https://i.imgur.com/4ojZU90.jpeg" 
                     alt="A person sits and looks up and away, behind them are pink clouds and a blue sky"
                     width="300rem"
-                />
+                    className='ContactForm-img'
+                /> 
                 <form id='ContactForm' onSubmit={this.handleSubmit}>
                     <input 
                         type='text' 
@@ -54,7 +56,7 @@ class ContactForm extends Component {
                         required
                         placeholder='name' 
                         name='name'
-                        className='ContactForm-name'>
+                        className='ContactForm-input'>
                     </input><br></br>
                     <input 
                         type='email' 
@@ -63,7 +65,7 @@ class ContactForm extends Component {
                         required
                         placeholder='email' 
                         name='email'
-                        className='ContactForm-email'>
+                        className='ContactForm-input'>
                     </input><br></br>
                     <textarea 
                         value={this.state.formData.question}
@@ -71,7 +73,7 @@ class ContactForm extends Component {
                         required
                         placeholder='questions?' 
                         name='question'
-                        className='ContactForm-question'>
+                        className='ContactForm-input'>
                     </textarea><br></br>
                     <input 
                         type='submit' 
@@ -84,6 +86,7 @@ class ContactForm extends Component {
                 </form>
         
             </div>
+            </>
         )
     }
 }

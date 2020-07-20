@@ -16,10 +16,12 @@ function ResourceCard({ resourceFromParent, handleDeleteResource }) {
             </div>
             <div>
                 <Link 
-                    to={{ pathname: '/edit', 
-                    state: {clickedOnResource: resourceFromParent} }}>
+                    to={{ pathname: '/edit', state: {clickedOnResource: resourceFromParent} }}
+                    className='btn'
+                >    
                 EDIT</Link>
                 <button
+                    className='btn'
                     onClick={() => handleDeleteResource(resourceFromParent._id)}
                 >
                 DELETE</button>

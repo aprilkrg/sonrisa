@@ -57,6 +57,7 @@ class App extends Component {
     this.setState(state => ({
       resources: state.resources.filter(resource => resource._id !== idOfResourceToDelete)
     }), () => this.props.history.push('/resources'));
+    console.log('pushing from handleDeleteResources > App.js');
   }
 
   handleUpdateResource = async updatedResourceData => {
@@ -69,6 +70,7 @@ class App extends Component {
     this.setState({
       resources
     }, () => this.props.history.push('/resources'));
+    console.log('pushing from getAllResources > App.js');
   }
 
   async componentDidMount() {
@@ -126,15 +128,15 @@ class App extends Component {
                 <AddResourcePage 
                   handleAddResource={this.handleAddResource} />
                 :
-                <Redirect to='/resources' />
-            } />
+                <Redirect to='/' />
+              } />
             <Route path='/edit' render={({ history, location }) =>
               userService.getUser() ?
                 <EditResourcePage 
                   handleUpdateResource={this.handleUpdateResource} 
                   location={location}/>
                 :
-                <Redirect to='/resources' />
+                <Redirect to='/' />
             } />
 
           <>
@@ -153,7 +155,7 @@ class App extends Component {
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus ultricies tristique nulla aliquet. Facilisi etiam dignissim diam quis enim.</p>
           </div> <br></br>
           <div className='App-home-section'>
-            <h1>Brand Statement</h1> 
+            <h1>Sonrisa Counseling LLC</h1> 
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus ultricies tristique nulla aliquet. Facilisi etiam dignissim diam quis enim.</p>
           </div>
           </>

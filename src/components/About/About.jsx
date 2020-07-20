@@ -25,14 +25,14 @@ class About extends Component {
                 </div><br></br>
                 <img 
                     src="https://i.imgur.com/fEPLrPL.jpg" 
-                    alt="photo of a person turned away from the camera facing a corner between two walls. The walls are painted in a rainbow gradient and the person is looking up."
+                    alt="A person is turned away from the camera and facing a corner between two walls. The walls are painted in a rainbow gradient and the person is looking up."
                     width="300rem"
                 /> <br/>
                 <div className='About-section'>
                     <h3>LGBTQIA Affirming</h3>
                     <p>My passion is to help folks who identify within the LGBTQIA Community. Through research and personal and professional experience, I know that people within the queer community experience higher rates of depression, anxiety, substance use, self-harm and suicide compared to straight and cisgender communities. This is not because queerness is a mental illness, but because homophobia and transphobia create ongoing stress that weighs on our community. My motto- there is nothing wrong with you! I can help you learn to survive in a society that is not fully accepting at this time.  </p>
                 </div><br></br>
-                <h3><button>En Español</button></h3>
+                <h3><button className='btn'>En Español</button></h3>
             </div>
         )
     }

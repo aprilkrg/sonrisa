@@ -1,9 +1,20 @@
 .ContactForm {
     display: flex;
-    flex-direction: column;
+    flex-direction: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
-.ContactForm-name, .ContactForm-email, .ContactForm-question {
-    width: 10rem;
+.ContactForm-input {
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+}
 
+.ContactForm-img {
+    border-radius: 1.5rem;
+    float: left;
 }

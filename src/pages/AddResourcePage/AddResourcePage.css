@@ -1,0 +1,42 @@
+.AddResource-input {
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+}
+
+.AddResource-h1 {
+    background-color: rgba(255, 255, 255, .7);
+    /* border: rgba(255, 255, 255, 0.6) solid 5px; */
+    /* border-style: outset; */
+    border-radius: 1rem;
+    margin: 1rem;
+}
+
+.AddResource-form {
+    /* border: yellow 5px solid; */
+    margin-left: 1rem;
+    
+}
+
+.btn {
+    /* background-color: rgba(248, 155, 194, .3); */
+    background-color: transparent;
+    color: white;
+    font-weight: 600;
+    margin: 1.5rem;
+    padding: .7rem;
+    border-radius: .5rem;
+    border: whitesmoke 3px solid;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 13.3333px;
+    font-family: Arial, sans-serif;
+}
+
+.btn:hover {
+    background-color: rgba(255, 255, 194, .4);
+
+}

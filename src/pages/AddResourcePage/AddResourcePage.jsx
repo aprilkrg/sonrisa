@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './AddResourcePage.css';
 
 class AddResourcePage extends Component {
     state = {
@@ -28,41 +29,44 @@ class AddResourcePage extends Component {
     render() {
         return(
             <>
-                <h1> Add Resource </h1>
+                <h1 className='AddResource-h1'> Add Resource</h1>
                 <form onSubmit={this.handleSubmit}>
-                    <div>
-                        <label>Title</label>
+                    <div className='AddResource-form'>
+                        {/* <label className='AddResource-label'>Title</label> */}
                         <input 
+                            placeholder='Title'
                             name='title'
                             value={this.state.formData.title}
                             onChange={this.handleChange}
                             required
-                        />
-                    </div>
-                    <div>
-                        <label>Topic</label>
+                            className='AddResource-input'
+                            /> <br />
+                        {/* <label className='AddResource-label'>Topic</label> */}
                         <input 
+                            placeholder='Topic'
                             name='topic'
                             value={this.state.formData.topic}
                             onChange={this.handleChange}
                             required
-                        />
-                    </div>
-                    <div>
-                        <label>Type here ... 
+                            className='AddResource-input'
+                            /> <br />
+                        {/* <label className='AddResource-label'>Type here ...  */}
                         <input 
+                            placeholder='Type here...'
                             name='body'
                             value={this.state.formData.body}
                             onChange={this.handleChange}
+                            height='400vh'
                             required
+                            className='AddResource-input'
                         />
-                        </label>
+                        {/* </label> */}
                     </div>
                     <button
                         type='submit'
                         className='btn'
                     >
-                        ADD RESOURCE
+                        SAVE
                     </button>
                 </form>
             </>
