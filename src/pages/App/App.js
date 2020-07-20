@@ -1,38 +1,28 @@
 import React, { Component } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import './App.css';
+import NavBar from '../../components/NavBar/NavBar';
 import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
+import About from '../../components/About/About';
+import ServicesPage from '../ServicesPage/ServicesPage';
+
 import ResourceListPage from '../ResourceListPage/ResourceListPage';
 import AddResourcePage from '../AddResourcePage/AddResourcePage';
 import EditResourcePage from '../EditResourcePage/EditResourcePage';
-import NavBar from '../../components/NavBar/NavBar';
-import Footer from '../../components/Footer/Footer';
-import About from '../../components/About/About';
-import ContactForm from '../../components/ContactFormCard/ContactFormCard';
+
+import ContactFormListPage from '../ContactFormListPage/ContactFormListPage';
 import AddContactFormPage from '../AddContactFormPage/AddContactFormPage';
+
 import userService from '../../utils/userService';
-import * as contactService from '../../utils/contactFormsService';
 import * as resourceService from '../../utils/resourcesService';
-import ServicesPage from '../ServicesPage/ServicesPage';
+import * as contactFormsService from '../../utils/contactFormsService';
 
 class App extends Component {
   state = {
     contactForms: [],
     resources: [],
     user: userService.getUser(),
-  }
-
-  handleFormSubmit = async newContactForm => {
-    await contactService.createContactFormAPI(newContactForm);
-    this.getAllContactForms();
-  }
-
-  getAllContactForms = async () => {
-    const forms = await contactService.getAllContactFormsAPI();
-    this.setState({
-      forms
-    });
   }
 
   handleLogout = () => {
@@ -69,6 +59,25 @@ class App extends Component {
     const resources = await resourceService.getAllResourcesAPI();
     this.setState({
       resources
+    });
+  }
+
+  handleAddContactForm = async newContactFormData => {
+    await contactFormsService.createContactFormAPI(newContactFormData);
+    this.getAllContactForms(true);
+  }
+
+  handleDeleteContactForm = async idOfContactFormToDelete => {
+    await contactFormsService.deleteContactFormAPI(idOfContactFormToDelete);
+    this.setState(state => ({
+      contacts: state.contacts.filter(contact => contact._id !== idOfContactFormToDelete)
+    }), () => this.props.history.push('/contacts'));
+  }
+
+  getAllContactForms = async () => {
+    const contactForms = await contactFormsService.getAllContactFormsAPI();
+    this.setState({
+      contactForms
     });
   }
 
@@ -122,6 +131,15 @@ class App extends Component {
                 handleDeleteResource={this.handleDeleteResource}
               />
             } />
+            <Route path='/contacts' render={({ history }) =>
+              userService.isAdmin() ?
+              <ContactFormListPage 
+                contactFormsFromParent={this.state.contacts}
+                handleDeleteContactForm={this.handleDeleteContactForm}
+              />
+              :
+              <Redirect to='/' />
+            } />
             <Route path='/add' render={() =>
               userService.isAdmin() ? 
                 <AddResourcePage 
@@ -162,9 +180,6 @@ class App extends Component {
           </>
           </Switch>
         </main>
-      <footer>
-          {/* <Footer /> */}
-      </footer>
       </div>
     );
   }
