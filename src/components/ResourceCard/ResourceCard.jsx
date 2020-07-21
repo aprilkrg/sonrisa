@@ -6,18 +6,20 @@ import './ResourceCard.css';
 function ResourceCard({ resourceFromParent, handleDeleteResource }) {
     return (
         <div className='ResourceCard'>
-            <div>
-                <h3>"{resourceFromParent.title}"</h3>
-            </div>
-            <div className='ResourceCard-topic'>
-                <p className='ResourceCard-topic'><i>Topic: </i></p>
-                <p className='ResourceCard-topic'>{resourceFromParent.topic}</p>
-            </div>
-            <div>
-                <p>{resourceFromParent.body}</p>
+            <div >
+                <div>
+                    <h3>"{resourceFromParent.title}"</h3>
+                </div>
+                <div className='ResourceCard-topic'>
+                    <p className='ResourceCard-topic'><i>Topic: </i></p>
+                    <p className='ResourceCard-topic'>{resourceFromParent.topic}</p>
+                </div>
+                <div>
+                    <p>{resourceFromParent.body}</p>
+                </div>
             </div>
             {userService.isAdmin() ?
-                <div>
+                <div className='ResourceCard-links'>
                     <Link
                         to={{ pathname: '/edit', state: { clickedOnResource: resourceFromParent } }}
                         className='btn'
@@ -30,7 +32,6 @@ function ResourceCard({ resourceFromParent, handleDeleteResource }) {
                 :
                 ''
             }
-
         </div>
 
     )

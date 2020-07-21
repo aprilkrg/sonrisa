@@ -1,8 +1,15 @@
 .ResourceCard {
     background-color: rgba(0, 0, 0, .4);
     color: white;
+    border: lightgray 2px solid;
+    margin: 2rem;
 }
 
 .ResourceCard-topic {
     display: inline;
+}
+
+.ResourceCard-links {
+    /* border: white 5px solid; */
+    /* background-color: transparent; */
 }

@@ -8,7 +8,7 @@ function ContactFormCard({ contactFormFromParent, handleDeleteContactForm }) {
         <>
             <div>
                 {userService.isAdmin() ?
-                    <div>
+                    <div className='ContactFormCard'>
                         <div>
                             <h3>Contact Form</h3>
                             <p>{contactFormFromParent.name}</p>

@@ -23,7 +23,7 @@ class NavBar extends Component {
                         &nbsp;&nbsp;&nbsp;&nbsp;
                         <Link to='/' className='NavBar-link'>HOME</Link>
                         &nbsp;&nbsp;&nbsp;&nbsp;
-                        <div className='NavBar-welcome'>{userService.getUser().name ? `WELCOME, ${userService.getUser().name.toUpperCase()}` : ''}</div>
+                        <div className='NavBar-welcome'>{userService.getUser().name ? `WELCOME, ${userService.getUser().name.toUpperCase()} | ` : ''}</div>
                         &nbsp;&nbsp;&nbsp;&nbsp;
                     </>
                     :

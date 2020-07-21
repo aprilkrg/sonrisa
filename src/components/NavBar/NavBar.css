@@ -16,13 +16,13 @@
 }
 
 .NavBar-welcome {
-    position: relative;
-    padding-right: 20rem;
+    /* position: relative; */
+    /* padding-right: 20rem; */
 }
 
 .NavBar-admin {
-    background-color: yellow;
-    display: flex;
-    float: right;
+    /* background-color: yellow; */
+    /* display: flex; */
+    /* float: right; */
     margin-top: 100px;
 }
