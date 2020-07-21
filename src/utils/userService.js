@@ -23,11 +23,26 @@ function getUser() {
   return tokenService.getUserFromToken();
 }
 
+// function getAllUsersAPI() {
+//   return fetch(BASE_URL, {
+//       headers: {
+//           'Authorization': `Bearer ${tokenService.getTokenFromLocalStorage()}`
+//       }
+//   })
+//   .then(allUsers => allUsers.json());
+// }
+
 function isAdmin() {
-  console.log(getUser(),'get the user');
-  return getUser().isAdmin;
-  console.log('this is the admin function');
+  return getUser() ? getUser().isAdmin : false;
 }
+
+// async function isAdmin() {
+//   // const user = this.getAllUsersAPI();
+//   const user = getUser();
+//   console.log(user,'user console log');
+//   // await getAllUsersAPI(user).isAdmin;
+//   await getUser(user).isAdmin;
+// }
 
 function logout() {
   tokenService.removeTokenFromStorage();
@@ -50,6 +65,7 @@ function login(creds) {
 export default {
   signup, 
   getUser,
+  // getAllUsersAPI,
   isAdmin,
   logout,
   login

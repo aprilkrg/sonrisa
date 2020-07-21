@@ -70,7 +70,7 @@ class App extends Component {
   handleDeleteContactForm = async idOfContactFormToDelete => {
     await contactFormsService.deleteContactFormAPI(idOfContactFormToDelete);
     this.setState(state => ({
-      contacts: state.contacts.filter(contact => contact._id !== idOfContactFormToDelete)
+      contactForms: state.contactForms.filter(contactForm => contactForm._id !== idOfContactFormToDelete)
     }), () => this.props.history.push('/contacts'));
   }
 
@@ -83,9 +83,11 @@ class App extends Component {
 
   async componentDidMount() {
     this.getAllResources();
-    // this.setState(
-    //   console.log('set state here')
-    // )
+    this.getAllContactForms();
+    // this.setState({
+    //   user
+    // })
+    console.log('component did mount')
   }
 
   render() {
@@ -114,7 +116,9 @@ class App extends Component {
             } />  
             <Route path='/contact' render={({ history }) =>
               <AddContactFormPage 
-                history={history}
+                // history={history}
+                handleAddContactForm={this.handleAddContactForm}
+                // contactFormsFromParent={this.state.contacts}
               />
             } />
             <Route path='/about' render={({ history }) =>
@@ -134,8 +138,8 @@ class App extends Component {
             <Route path='/contacts' render={({ history }) =>
               userService.isAdmin() ?
               <ContactFormListPage 
-                contactFormsFromParent={this.state.contacts}
-                handleDeleteContactForm={this.handleDeleteContactForm}
+              handleDeleteContactForm={this.handleDeleteContactForm}
+                contactFormsFromParent={this.state.contactForms}
               />
               :
               <Redirect to='/' />

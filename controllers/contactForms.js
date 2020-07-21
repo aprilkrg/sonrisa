@@ -3,7 +3,6 @@ const ContactForm = require('../models/contactForm');
 module.exports = {
     index,
     create,
-    update,
     delete: deleteOne,
 }
 
@@ -28,20 +27,10 @@ async function create(req, res) {
     }
 }
 
-async function update(req, res) {
-    try{
-        const updatedContactForm = await ContactForm.findByIdAndUpdate(req.params.id, req.body, {new: true});
-        res.status(200).json(updatedContactForm);
-    }
-    catch(err){
-        res.status(500).json(err);
-    }
-}
-
 async function deleteOne(req, res) {
     try{
         const deletedContactForm = await ContactForm.findByIdAndRemove(req.params.id);
-        res.status(200). json(deletedContactForm);
+        res.status(200).json(deletedContactForm);
     }
     catch(err){
         res.status(500).json(err);

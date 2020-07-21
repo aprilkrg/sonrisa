@@ -6,11 +6,11 @@ function ContactFormListPage({ contactFormsFromParent, handleDeleteContactForm }
         <>
             <h1>Contact Forms Submitted</h1>
             <div className='ContactFormPage'>
-                {contactFormsFromParent.map(contact =>
+                {contactFormsFromParent.map(contactForm =>
                     <div className='ContactFormCard'> 
                     <ContactFormCard 
-                        key={contact._id}
-                        contactFormFromParent={contact}
+                        key={contactForm._id}
+                        contactFormFromParent={contactForm}
                         handleDeleteContactForm={handleDeleteContactForm}
                     />
                     </div>

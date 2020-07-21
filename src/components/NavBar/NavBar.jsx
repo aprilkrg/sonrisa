@@ -7,6 +7,7 @@ class NavBar extends Component {
 
     render() {
         return (
+            <>
             <div className='NavBar'>
                 {userService.getUser() ? 
                     <>
@@ -39,7 +40,20 @@ class NavBar extends Component {
                         &nbsp;&nbsp;&nbsp;&nbsp;
                     </>
                 }
+            </div> <br/>&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+            <div className='NavBar-admin'>
+                {userService.isAdmin() ?
+                <>
+                    <Link to='/add' className='NavBar-link'>ADD</Link>
+                    &nbsp;&nbsp;|&nbsp;&nbsp;
+                    <Link to='/contacts' className='NavBar-link'>CONTACTS</Link>
+                </>
+                :
+                <>
+                </>
+                }
             </div>
+            </>
         );
     }
 

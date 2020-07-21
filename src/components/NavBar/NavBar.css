@@ -1,8 +1,10 @@
 .NavBar {
     display: flex;
     flex-direction: row-reverse;
+    align-items: center;
     /* color: rgb(255, 255, 255); */
     color: black;
+    font-weight: 400;
     text-shadow: 2px 2px lightgrey;
     opacity: .9;
 }
@@ -16,4 +18,11 @@
 .NavBar-welcome {
     position: relative;
     padding-right: 20rem;
+}
+
+.NavBar-admin {
+    background-color: yellow;
+    display: flex;
+    float: right;
+    margin-top: 100px;
 }

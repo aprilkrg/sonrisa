@@ -33,7 +33,6 @@ class AddResourcePage extends Component {
                 <h1 className='AddResource-h1'> Add Resource</h1>
                 <form onClick={this.handleSubmit}>
                     <div className='AddResource-form'>
-                        {/* <label className='AddResource-label'>Title</label> */}
                         <input 
                             placeholder='Title'
                             name='title'
@@ -42,7 +41,6 @@ class AddResourcePage extends Component {
                             required
                             className='AddResource-input'
                             /> <br />
-                        {/* <label className='AddResource-label'>Topic</label> */}
                         <input 
                             placeholder='Topic'
                             name='topic'
@@ -51,7 +49,6 @@ class AddResourcePage extends Component {
                             required
                             className='AddResource-input'
                             /> <br />
-                        {/* <label className='AddResource-label'>Type here ...  */}
                         <input 
                             placeholder='Type here...'
                             name='body'
@@ -61,7 +58,6 @@ class AddResourcePage extends Component {
                             required
                             className='AddResource-input'
                         />
-                        {/* </label> */}
                     </div> <br/>
                     <Link
                         to='/resources'

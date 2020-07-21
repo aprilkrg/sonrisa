@@ -41,7 +41,7 @@ async function update(req, res) {
 async function deleteOne(req, res) {
     try{
         const deletedResource = await Resource.findByIdAndRemove(req.params.id);
-        res.status(200). json(deletedResource);
+        res.status(200).json(deletedResource);
     }
     catch(err){
         res.status(500).json(err);

@@ -33,7 +33,7 @@ class About extends Component {
                     /> <br/>
                     <p>My passion is to help folks who identify within the LGBTQIA Community. Through research and personal and professional experience, I know that people within the queer community experience higher rates of depression, anxiety, substance use, self-harm and suicide compared to straight and cisgender communities. <br/><br/> This is not because queerness is a mental illness, but because homophobia and transphobia create ongoing stress that weighs on our community. <br/><br/> My motto- there is nothing wrong with you! I can help you learn to survive in a society that is not fully accepting at this time.  </p>
                 </div>
-                <h3><button className='btn'>En Español</button></h3>
+                {/* <h3><button className='btn'>En Español</button></h3> */}
             </div>
         )
     }
